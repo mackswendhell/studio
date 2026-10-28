@@ -18,8 +18,8 @@ Na primeira resposta da sessão, antes de qualquer outra coisa (a menos que a pe
    - Nível 2 → [guias/4-nivel-2-higgsfield.md](guias/4-nivel-2-higgsfield.md) e [guias/5-direcao-editorial.md](guias/5-direcao-editorial.md). No caminho B (API key), leia também o guia do Nível 1, porque a montagem é no Remotion.
 
 3. **Confira os pré-requisitos em silêncio** e resolva o que faltar:
-   - `node_modules/` existe, `python -c "import faster_whisper"` funciona e as skills `watch` e `remotion-best-practices` estão disponíveis. Se qualquer um faltar, **instale você mesmo** rodando `npm run instalar` (instala tudo isso de uma vez) e avise que as skills novas só aparecem numa **sessão nova**: peça para a pessoa reabrir o Claude nesta pasta;
-   - `ffmpeg`, `ffprobe`, `node` e `python` respondem. Se faltarem, instale com `winget` (Windows) ou `brew` (Mac), conforme [guias/1-primeiros-passos.md](guias/1-primeiros-passos.md);
+   - `node_modules/` existe, `py -c "import faster_whisper"` (no Mac, `python3 -c ...`) funciona e as skills `watch` e `remotion-best-practices` estão disponíveis. Se qualquer um faltar, **instale você mesmo** rodando `npm run instalar` (instala tudo isso de uma vez) e avise que as skills novas só aparecem numa **sessão nova**: peça para a pessoa reabrir o Claude nesta pasta;
+   - `ffmpeg`, `ffprobe`, `node` e o Python (`py` no Windows, `python3` no Mac) respondem. Se faltarem, instale com `winget` (Windows) ou `brew` (Mac), conforme [guias/1-primeiros-passos.md](guias/1-primeiros-passos.md);
    - Nível 2: as ferramentas da Higgsfield respondem (chame `balance`). Se não houver conector, explique os dois caminhos de conexão do guia (A: entrar com a conta, recomendado; B: API key da Higgsfield Cloud via `tools/hf_api.py`, sem Higgsedit). No caminho B, confirme que a variável `HF_KEY` (ou `HF_API_KEY` + `HF_API_SECRET`) existe, **sem imprimir o valor**.
 
 4. Liste os projetos em `projetos/` e pergunte qual editar. Se não houver nenhum, ensine a criar: `projetos/001. nome/video/` com o vídeo e `prints/` com as imagens.
@@ -60,7 +60,7 @@ Depois de assistir o vídeo, **proponha você mesmo** duas ou três direções (
 7. **Nunca apague** vídeos, prints ou qualquer arquivo que você não criou. Apague só os seus intermediários.
 8. **Nível 2:** nenhum crédito sem plano aprovado; se o gasto passar ~20% do estimado, pare e avise.
 9. **Segredos:** nunca grave chaves ou tokens em arquivos do repositório nem os mostre na conversa. Use variáveis de ambiente.
-10. **Caminhos têm espaço e acento** (`projetos/001. nome/`): use sempre aspas. No Windows, `python`, não `python3`.
+10. **Caminhos têm espaço e acento** (`projetos/001. nome/`): use sempre aspas. **No Windows use `py`**, não `python` nem `python3`: `python` cai no atalho quebrado da Microsoft Store e responde "Python was not found". Ou seja: `py tools/transcrever.py ...` e `py -m pip install ...`. No Mac, `python3` nos dois.
 
 ## Mapa do repositório
 

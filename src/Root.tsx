@@ -13,6 +13,14 @@ import {OpenClaw} from './videos/openclaw/OpenClaw';
 import {CapaOpenClaw} from './videos/openclaw/Capa';
 import {DURACAO as HARNESS_DURACAO, FPS as HARNESS_FPS} from './videos/harness/base';
 import {Harness} from './videos/harness/Harness';
+import {
+  ALTURA as PRAIA_ALTURA,
+  FPS as PRAIA_FPS,
+  LARGURA as PRAIA_LARGURA,
+  QUADROS_MASTER as PRAIA_QUADROS_MASTER,
+  QUADROS_TOTAL as PRAIA_QUADROS,
+} from './videos/praia-reserva/base';
+import {PraiaReserva} from './videos/praia-reserva/PraiaReserva';
 
 const FPS = 30;
 const SEIS_SEGUNDOS = 6 * FPS;
@@ -40,6 +48,14 @@ export const RemotionRoot: React.FC = () => (
     </Folder>
     <Folder name="003-harness">
       <Composition id="Harness" component={Harness} width={1920} height={1080} fps={HARNESS_FPS} durationInFrames={Math.round(HARNESS_DURACAO * HARNESS_FPS)} />
+    </Folder>
+
+    {/* Série "Praia" do Igor: quatro criativos verticais, um por tomada. */}
+    <Folder name="Praia">
+      {/* Cartela de CTA na faixa inferior: mesma duração do master (regra 1). */}
+      <Composition id="PraiaReserva" component={PraiaReserva} defaultProps={{variante: 'faixa' as const}} width={PRAIA_LARGURA} height={PRAIA_ALTURA} fps={PRAIA_FPS} durationInFrames={PRAIA_QUADROS_MASTER} />
+      {/* Cartela de CTA em tela cheia depois do último quadro: 5 s a mais que o master. */}
+      <Composition id="PraiaReservaCartelaFinal" component={PraiaReserva} defaultProps={{variante: 'fim' as const}} width={PRAIA_LARGURA} height={PRAIA_ALTURA} fps={PRAIA_FPS} durationInFrames={PRAIA_QUADROS} />
     </Folder>
   </>
 );
