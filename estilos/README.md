@@ -67,3 +67,11 @@ Mistura o "papel creme em aula" com a legenda dinâmica, em vertical.
 ```text
 Coloquei 3 prints do canal X em prints/referencia-*. Segue esse visual.
 ```
+
+---
+
+## Quando nada aqui serve
+
+Há um acervo de fora em [referencias/](../referencias/README.md): 703 vídeos que outras pessoas
+fizeram pedindo ao Claude para animar em código, com o prompt de cada um — motion graphics,
+explainers, cenas 3D. Peça "me mostra formatos das referências" e o Claude garimpa de lá.

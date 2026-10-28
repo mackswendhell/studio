@@ -32,7 +32,7 @@ Quando a pessoa não souber o que pedir, ofereça opções concretas, poucas por
 
 - **Entregável:** vídeo completo em MP4 (padrão) ou inserções separadas (overlays transparentes em MOV + telas cheias em MP4).
 - **Formato:** horizontal 16:9 (YouTube), vertical 9:16 (Reels, TikTok, Shorts), quadrado.
-- **Estilo:** mostre a [galeria](estilos/README.md) e cite 2–3 estilos que combinam com o assunto do vídeo. Lembre que ela pode trazer referências próprias em `prints/`.
+- **Estilo:** mostre a [galeria](estilos/README.md) e cite 2–3 estilos que combinam com o assunto do vídeo. Lembre que ela pode trazer referências próprias em `prints/`. Se nada na galeria servir, garimpe formatos no acervo de [referencias/](referencias/README.md) — 703 vídeos animados em código, com o prompt de cada um.
 - **Intensidade:** sutil (quase só câmera), equilibrada, dominante (muita coisa na tela).
 - **Recursos:** prints com zoom e marca-texto, tela dividida, câmera em card (vertical, 16:9, quadrado, mini ou meia tela, bordas arredondadas ou "colada" com borda branca e fita, variando ao longo do vídeo), legendas dinâmicas, contadores e gráficos, fluxos que se montam, tipografia grande, B-roll gerado (Nível 2).
 - **Trecho:** o vídeo inteiro, só a abertura, só um trecho.
@@ -68,6 +68,7 @@ Depois de assistir o vídeo, **proponha você mesmo** duas ou três direções (
 CLAUDE.md                 este arquivo
 guias/                    1 primeiros passos · 2 nível 1 · 3 manual do Remotion · 4 nível 2 · 5 direção editorial
 estilos/                  galeria de estilos (README.md + imagens/)
+referencias/              acervo de fora, para ampliar o cardápio de formatos (README.md explica)
 projetos/<NNN. slug>/     video/ · prints/ · frames/ · transcricao/ · hf/ · plano.md · edit.jsx
 edicoes/<NNN. slug>/      somente entregáveis finais
 src/Root.tsx              registro das composições do Remotion
